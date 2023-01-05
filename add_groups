@@ -1,0 +1,25 @@
+me: add groups
+  hosts: all 
+  user: root
+  tasks:
+  - name: Ensure group "devops" exists
+    group:
+      name: devops
+      state: present
+  - name: Ensure group "billing" exists
+    group:
+      name: billing
+      state: present
+  - name: Ensure group "sales" exists
+    group:
+      name: sales
+      state: present
+  - name: Ensure group "marketing" exists
+    group:
+      name: marketing
+      state: present
+  - name: Ensure group "dev" exists
+    group:
+      name: dev
+      state: present
+

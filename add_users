@@ -1,0 +1,30 @@
+me: add users
+  hosts: all 
+  user: root
+  tasks:
+  - name: create user bob
+    user:
+      name: ben
+      generate_ssh_key: yes
+      ssh_key_file: .ssh/id_rsa
+  - name: create user bob
+    user:
+      name: ben
+      generate_ssh_key: yes
+      ssh_key_file: .ssh/id_rsa
+  - name: create user bob
+    user:
+      name: ben
+      generate_ssh_key: yes
+      ssh_key_file: .ssh/id_rsa
+  - name: create user bob
+    user:
+      name: ben
+      generate_ssh_key: yes
+      ssh_key_file: .ssh/id_rsa
+  - name: create user bob
+    user:
+      name: ben
+      generate_ssh_key: yes
+      ssh_key_file: .ssh/id_rsa
+

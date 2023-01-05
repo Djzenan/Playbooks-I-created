@@ -1,0 +1,10 @@
+me: Change Configurations of /etc/motd
+  hosts: all 
+  user: root
+  tasks:
+  - name: Insert/Update "Match User" configuration block in /etc/ssh/sshd_config
+    blockinfile:
+      path: /etc/motd
+      block: |
+        Maintenance in progress, the system will be restarted soon
+

@@ -1,0 +1,22 @@
+me: Change Configurations
+  hosts: all 
+  user: root
+  tasks:
+  - name: Ensure SELinuxtype is set to minimum mode
+    ansible.builtin.lineinfile:
+      path: /etc/selinux/config
+      regexp: '^SELINUXTYPE='
+      line: SELINUXTYPE=minimum
+  - name: Ensure we have our own comment added to /etc/hosts
+    ansible.builtin.lineinfile:
+      path: /etc/hosts
+      regexp: '^# port for http'
+      insertafter: '^::1         localhost localhost.localdomain localhost6 localhost6.localdomain6'
+      line: '127.0.0.1 facebook.com'
+  - name: Ensure we have our own comment added to /etc/resolv.conf
+    lineinfile:
+      path: /etc/resolv.conf
+      regexp: '^# port for http'
+      insertafter: 'nameserver 10.0.0.2'
+      line: 'nameserver 8.8.8.8'
+
